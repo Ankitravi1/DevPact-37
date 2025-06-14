@@ -3,8 +3,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Trophy, Users, TrendingUp, Medal } from "lucide-react"
+import { Trophy, Users, TrendingUp, Medal, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { Navigation } from "@/components/ui/navigation"
 
 // Mock leaderboard data
 const generateLeaderboardData = () => {
@@ -71,8 +72,15 @@ export default function LeaderboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-black text-white">
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 mb-8">
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
+
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">

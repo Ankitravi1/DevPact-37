@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Github, Globe } from "lucide-react"
 import Link from "next/link"
+import { Navigation } from "@/components/ui/navigation"
 
 const interestTags = [
   "#javascript",
@@ -58,28 +59,33 @@ export default function ApplicationPage() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
-        <Card className="bg-gray-900/50 border-gray-800 max-w-md w-full">
-          <CardContent className="p-8 text-center">
-            <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-2xl">✓</span>
-            </div>
-            <h2 className="text-2xl font-bold mb-4 text-white">Application Submitted!</h2>
-            <p className="text-gray-400 mb-6">
-              Thank you for applying to the Genesis Cohort. We'll review your application and get back to you within 48
-              hours.
-            </p>
-            <Link href="/">
-              <Button className="bg-blue-600 hover:bg-blue-700">Return to Home</Button>
-            </Link>
-          </CardContent>
-        </Card>
+      <div className="min-h-screen bg-black text-white">
+        <Navigation />
+        <div className="flex items-center justify-center p-4 min-h-[80vh]">
+          <Card className="bg-gray-900/50 border-gray-800 max-w-md w-full">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">✓</span>
+              </div>
+              <h2 className="text-2xl font-bold mb-4 text-white">Application Submitted!</h2>
+              <p className="text-gray-400 mb-6">
+                Thank you for applying to the Genesis Cohort. We'll review your application and get back to you within 48
+                hours.
+              </p>
+              <Link href="/">
+                <Button className="bg-blue-600 hover:bg-blue-700">Return to Home</Button>
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     )
   }
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Navigation />
+      
       <div className="container mx-auto px-4 py-8">
         <Link href="/" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 mb-8">
           <ArrowLeft className="w-4 h-4" />

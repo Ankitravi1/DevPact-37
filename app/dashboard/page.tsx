@@ -7,8 +7,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Users, Calendar, Trophy, MessageCircle, Clock } from "lucide-react"
+import { Users, Calendar, Trophy, MessageCircle, Clock, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { Navigation } from "@/components/ui/navigation"
 
 // Mock user data
 const mockUser = {
@@ -109,8 +110,15 @@ export default function PactDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-black text-white">
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 mb-8">
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
+
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">

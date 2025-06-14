@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "DevPact 37 - Developer Accountability Platform",
   description: "The exclusive accountability platform for serious developers. Join the Genesis Cohort.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

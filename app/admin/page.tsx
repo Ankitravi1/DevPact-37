@@ -6,7 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Eye, Check, X, Users } from "lucide-react"
+import { Eye, Check, X, Users, ArrowLeft } from "lucide-react"
+import Link from "next/link"
+import { Navigation } from "@/components/ui/navigation"
 
 // Mock data for applications
 const mockApplications = [
@@ -82,8 +84,15 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-black text-white">
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 mb-8">
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
+
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
             Admin Dashboard

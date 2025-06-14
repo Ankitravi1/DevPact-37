@@ -3,10 +3,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Target, Trophy, Clock } from "lucide-react"
 import Link from "next/link"
+import { Navigation } from "@/components/ui/navigation"
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Navigation />
+      
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-black to-black" />
